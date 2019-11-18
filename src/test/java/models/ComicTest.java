@@ -16,7 +16,23 @@ public class ComicTest {
     }
 
     @Test
-    public void consructorTest(){
+    public void constructorTest(){
+        Integer expectedId = 8787;
+        String expectedTitle = "Batman: Year One";
+        String expectedPublisher = "DC Comics";
+        String expectedSeries = "Batman";
+        Integer expectedIssueNumber = 1;
+        Integer expectedQty = 10;
+        Float expectedPrice = 6.75F;
 
+        Comic testComic = new Comic(expectedId,expectedTitle,expectedPublisher,expectedSeries,expectedIssueNumber,expectedQty,expectedPrice);
+
+        Assert.assertEquals(expectedId,testComic.getId());
+        Assert.assertEquals(expectedTitle,testComic.getTitle());
+        Assert.assertEquals(expectedIssueNumber,testComic.getIssueNumber());
+        Assert.assertEquals(expectedPrice,testComic.getPrice());
+        Assert.assertEquals(expectedPublisher,testComic.getPublisher());
+        Assert.assertEquals(expectedQty,testComic.getQty());
+        Assert.assertEquals(expectedSeries,testComic.getSeries());
     }
 }
