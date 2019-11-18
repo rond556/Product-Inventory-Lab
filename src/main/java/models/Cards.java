@@ -6,5 +6,5 @@ public class Cards {
     private String game;
     private String expansion;
     private Integer qty;
-    private float price;
+    private Float price;
 }
