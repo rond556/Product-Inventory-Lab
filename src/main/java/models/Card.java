@@ -1,6 +1,8 @@
 package models;
 
-public class Card {
+import java.util.Objects;
+
+public class Card implements Comparable<Card>{
 
     private Integer id;
     private String name;
@@ -68,5 +70,10 @@ public class Card {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    @Override
+    public int compareTo(Card o) {
+        return this.getId() - o.getId();
     }
 }

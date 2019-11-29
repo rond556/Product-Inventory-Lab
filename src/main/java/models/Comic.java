@@ -1,6 +1,6 @@
 package models;
 
-public class Comic {
+public class Comic implements Comparable<Comic> {
 
     private Integer id;
     private String title;
@@ -78,5 +78,10 @@ public class Comic {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    @Override
+    public int compareTo(Comic o) {
+        return this.getId() - o.getId();
     }
 }
