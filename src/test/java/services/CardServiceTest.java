@@ -15,9 +15,9 @@ public class CardServiceTest {
 
     @Before
     public void setUp(){
-        Card siegeRhino = cardServices.create("Siege Rhino","Magic","Khans of Tarkir",44,1.5F);
-        Card hardenedScales = cardServices.create("Hardened Scales", "Magic", "Khans of Tarkir", 14,3.5F);
-        Card stormChaserMage = cardServices.create("Stormchaser Mage", "Magic", "Oath of the Gatewatch", 180, .75F);
+        Card siegeRhino = cardServices.create("Siege Rhino","Magic","Khans of Tarkir",44,1.5);
+        Card hardenedScales = cardServices.create("Hardened Scales", "Magic", "Khans of Tarkir", 14,3.5);
+        Card stormChaserMage = cardServices.create("Stormchaser Mage", "Magic", "Oath of the Gatewatch", 180, .75);
         cardInventory.add(stormChaserMage);
         cardInventory.add(siegeRhino);
         cardInventory.add(hardenedScales);
@@ -29,7 +29,7 @@ public class CardServiceTest {
         String expectedGame = "Magic";
         String expectedExpansion = "Khans of Tarkir";
         Integer expectedQty = 44;
-        Float expectedPrice = 1.5F;
+        Double expectedPrice = 1.5;
 
         CardServices cardServices = new CardServices();
         Card testCard = cardServices.create(expectedName, expectedGame, expectedExpansion, expectedQty, expectedPrice);
@@ -39,7 +39,7 @@ public class CardServiceTest {
         String actualGame = testCard.getGame();
         String actualExpansion = testCard.getExpansion();
         Integer actualQty = testCard.getQty();
-        Float actualPrice = testCard.getPrice();
+        Double actualPrice = testCard.getPrice();
 
         Assert.assertEquals(Integer.class.getName(), actualId.getClass().getName());
         Assert.assertEquals(expectedExpansion, actualExpansion);
@@ -51,7 +51,7 @@ public class CardServiceTest {
 
     @Test
     public void findTest(){
-        Card expected = cardServices.create("Siege Rhino","Magic","Khans of Tarkir",44,1.5F);
+        Card expected = cardServices.create("Siege Rhino","Magic","Khans of Tarkir",44,1.5);
         Card actual = cardServices.findCard(1);
 
         Assert.assertEquals(expected.getName(),actual.getName());
@@ -60,7 +60,7 @@ public class CardServiceTest {
 
     @Test
     public void findTest2(){
-        Card expected = cardServices.create("Stormchaser Mage", "Magic", "Oath of the Gatewatch", 180, .75F);
+        Card expected = cardServices.create("Stormchaser Mage", "Magic", "Oath of the Gatewatch", 180, .75);
         Card actual = cardServices.findCard(3);
 
         Assert.assertEquals(expected.getName(),actual.getName());

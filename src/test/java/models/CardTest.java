@@ -22,7 +22,7 @@ public class CardTest {
         String expectedGame = "Magic";
         String expectedExpansion = "Khans of Tarkir";
         Integer expectedQty = 44;
-        Float expectedPrice = 1.5F;
+        Double expectedPrice = 1.5;
 
         Card testCard = new Card(expectedId,expectedName,expectedGame,expectedExpansion,expectedQty,expectedPrice);
 

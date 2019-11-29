@@ -9,13 +9,13 @@ public class Card implements Comparable<Card>{
     private String game;
     private String expansion;
     private Integer qty;
-    private Float price;
+    private Double price;
 
     public Card(){
 
     }
 
-    public Card(Integer id, String name, String game, String expansion, Integer qty, Float price) {
+    public Card(Integer id, String name, String game, String expansion, Integer qty, Double price) {
         this.id = id;
         this.name = name;
         this.game = game;
@@ -64,11 +64,11 @@ public class Card implements Comparable<Card>{
         this.qty = qty;
     }
 
-    public Float getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

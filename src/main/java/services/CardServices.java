@@ -8,7 +8,7 @@ public class CardServices {
     public static Integer nextId = 1;
     private ArrayList<Card> cardInventory = new ArrayList<>();
 
-    public Card create(String name, String game, String expansion, Integer qty, Float price){
+    public Card create(String name, String game, String expansion, Integer qty, Double price){
         Card createdCard = new Card(nextId++, name, game, expansion,qty, price);
         cardInventory.add(createdCard);
         return createdCard;
